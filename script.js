@@ -45,12 +45,12 @@ function generateAffirmation() {
 
   chime.play();
 
-  // Sparkle effect
+  // sparkle effect
   const mirror = document.getElementById("mirror");
   mirror.classList.add("animate");
   setTimeout(() => mirror.classList.remove("animate"), 1000);
 
-  // Speak the affirmation
+  // speak the affirmation
   if ('speechSynthesis' in window) {
     const utterance = new SpeechSynthesisUtterance(newAffirmation);
     utterance.lang = 'en-US';
